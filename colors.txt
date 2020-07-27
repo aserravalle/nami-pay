@@ -1,0 +1,8 @@
+Foreground - Dark Blue
+#2E435C
+
+Background - Light Blue
+#E6F6FF
+
+Accent 3 - Red
+#AB3307
