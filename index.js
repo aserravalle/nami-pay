@@ -158,6 +158,7 @@ function onClickAcceptContract(){
 function onClickDeclineContract(){
 	$("#div_tide_loan").hide();
 	$("#div_pay_now").hide();
+	$("#div_payment_confirmation").hide();
 }
 
 
