@@ -107,15 +107,17 @@ function onClickPayNow(){
 	for (var bill = 0; bill < Break.length; bill++) {
 		amount_payable += Break[bill]['amount_payable'];
 	}
-	let processing_fee1 = 0.025*amount_payable
+	let transaction_fee = Math.min(Math.round(0.005*amount_payable), 50);
 
 	// Show payment and direct debit date in columns
-	$("#amount_payable").html(
+	$("#amount_payable1").html(
 		'$' + amount_payable.toString()
 	);
-	$("#processing_fee1").html(
-		'$' + processing_fee1.toString()
+	$("#transaction_fee").html(
+		'$' + transaction_fee.toString()
 	);
+
+	$("#div_payment_confirmation").hide();
 }
 
 function onClickShowContract(){
@@ -126,15 +128,21 @@ function onClickShowContract(){
 	for (var bill = 0; bill < Break.length; bill++) {
 		amount_payable += Break[bill]['amount_payable'];
 	}
-	let fortnightly_installment = amount_payable/4
-	let processing_fee2 = 0.07*amount_payable
+	$("#amount_payable2").html(
+		'$' + amount_payable.toString()
+	);
 
+	let processing_fee = Math.round(0.07*amount_payable);
+	$("#processing_fee").html(
+		'$' + processing_fee.toString()
+	);
+
+	let fortnightly_installment = Math.round((amount_payable + processing_fee)/4);
 	$("#fortnightly_installment").html(
 		'$' + fortnightly_installment.toString()
 	);
-	$("#processing_fee2").html(
-		'$' + processing_fee2.toString()
-	);
+
+	$("#div_payment_confirmation").hide();
 }
 
 function onClickAcceptContract(){

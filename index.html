@@ -29,8 +29,8 @@
       <div class="nav-wrapper container">
         <a id="logo-container" class="brand-logo truncate">Nami Pay - Wave Your Bills Today</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="https://github.com/aserravalle/nami-pay" class="tooltipped" data-position="top" data-tooltip="Playground"><i class="fas fa-laptop-code"></i><span id="menu-text">Source Code</span></a></li>
-          <li><a href="https://github.com/aserravalle" target="_blank"><i class="fab fa-github-square"></i><span id="menu-text">GitHub</span></a></li>
+          <li><a href="https://github.com/aserravalle/nami-pay" class="tooltipped" data-position="top" data-tooltip="Source Code"><i class="fas fa-laptop-code"></i><span id="menu-text">Source Code</span></a></li>
+          <li><a href="https://github.com/aserravalle" class="tooltipped" data-position="top" data-tooltip="GitHub Profile"><i class="fab fa-github-square"></i><span id="menu-text">GitHub Profile</span></a></li>
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
@@ -46,7 +46,7 @@
   <div class="container blog-content">
     <div class="card">
       <div class="card-image">
-        <img src="./Banner.png" alt="Home image">
+         <img alt="Banner" src="https://raw.githubusercontent.com/aserravalle/nami-pay/master/Banner.png">
       </div>
     </div>
 
@@ -95,9 +95,9 @@
         <p>
           It's where we keep track of all of the bills and invoices you're yet to pay. You can add a bill to your Break by logging it manually, or your suppliers can also use your username to add themselves.
         </p>
-        <p>
+        <!-- <p>
           We've saved the payment details of all of your past invoices so you can choose one from the drop down menu or add a new one.
-        </p>
+        </p> -->
 
         <div class="row" id="div_container_getdata">
           <div class="col m4">
@@ -117,7 +117,6 @@
             <div class="input-field col s12">
               <label for="input_datedue">Date To Pay</label>
               <input type="text" id="input_datedue" placeholder="dd/mm/yyyy" value="">
-              <small class="form-text text-muted">Amount will be deducted from your balance on the last business day</small>
             </div>
           </div>
           <div class="col m4">
@@ -146,20 +145,23 @@
         <div class="card-content" id="div_pay_now" style="display:none"> <!-- Pay Now -->
           <span class="card-title">Pay Now</span>
           <p>
-            Double check the details below
+            The pay now option immediately withdraws money from your account and pays your bills. It's the quickest way to clear your Break.
+          </p>
+          <p>
+            We charge a 0.5% transaction fee, up to $50.
           </p>
 
           <div class="row">
             <div class="col m4">
               <div class="col s12">
-                <label for="amount_payable">Amount Payable</label>
-                <span id="amount_payable"></span>
+                <label for="amount_payable1">Amount Payable</label>
+                <span id="amount_payable1"></span>
               </div>
             </div>
             <div class="col m4">
               <div class="col s12">
-                <label for="processing_fee1">Processing Fee</label>
-                <span id="processing_fee1"></span>
+                <label for="transaction_fee">Transaction Fee</label>
+                <span id="transaction_fee"></span>
               </div>
             </div>
           </div>
@@ -172,20 +174,34 @@
       <div class="card-content" id="div_tide_loan" style="display:none"> <!-- Tide Loan -->
         <span class="card-title">Your New Tide Loan</span>
         <p>
-          Double check the details below
+          To take out a Tide Loan, you only need to:
+          <ol>
+            <li> Give us access to your bank account so we can run a credit score </li>
+            <li> Agree to a 7% processing fee, added to your Break </li>
+            <li> Pay a 25% deposit today</li>
+          </ol>
+        </p>
+        <p>
+          Over the next 6 weeks, we will take the remaining payments out of your account directly, but your bills will be settled today.
         </p>
 
         <div class="row">
           <div class="col m4">
             <div class="col s12">
-              <label for="fortnightly_installment">Fortnightly Installment</label>
-              <span id="fortnightly_installment"></span>
+              <label for="amount_payable2">Amount Payable</label>
+              <span id="amount_payable2"></span>
             </div>
           </div>
           <div class="col m4">
             <div class="col s12">
-              <label for="processing_fee2">Processing Fee</label>
-              <span id="processing_fee2"></span>
+              <label for="processing_fee">Processing Fee</label>
+              <span id="processing_fee"></span>
+            </div>
+          </div>
+          <div class="col m4">
+            <div class="col s12">
+              <label for="fortnightly_installment">Fortnightly Installment</label>
+              <span id="fortnightly_installment"></span>
             </div>
           </div>
         </div>
